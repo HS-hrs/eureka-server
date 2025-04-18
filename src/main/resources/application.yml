@@ -1,12 +1,18 @@
 server:
-  port: 8000
+  port: 8761
+
 spring:
-    application:
-      name: eureka-server
-    output:
-      ansi:
-        enabled: always
+  application:
+    name: eureka-server
+  output:
+    ansi:
+      enabled: always
+
 eureka:
+  instance:
+    hostname: localhost  # 자체적으로 사용하는 서버 이름
   client:
-    register-with-eureka: false # ?? ??? ???? ??
-    fetch-registry: false       # ??????? ?? ???? ??
+    register-with-eureka: false  # 이 서버는 Eureka에 등록하지 않음
+    fetch-registry: false        # 다른 서버의 레지스트리 가져오지 않음
+  server:
+    enable-self-preservation: false  # 자체 보호 기능 비활성화
