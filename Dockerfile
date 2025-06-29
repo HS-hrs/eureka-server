@@ -1,5 +1,5 @@
 # 1. OpenJDK 17 기반 이미지 사용
-FROM openjdk:17
+FROM eclipse-temurin:17-jre-alpine
 
 # 2. 작업 디렉토리 지정
 WORKDIR /app
