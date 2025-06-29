@@ -1,3 +1,15 @@
 Dockerfile
 .github
 README.md
+
+build/*
+!build/libs/*.jar
+
+.gradle/
+.git
+
+.idea/
+
+.DS_Store
+
+*.log
